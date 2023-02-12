@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:chuck_norris_io/core/routes/page_generator.dart';
 
 class MyApp extends StatelessWidget {
   final String? initialRoute; // route from main.dart
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           locale: const Locale('es', 'ES'),
           title: 'ChuckNorris',
           initialRoute: initialRoute,
-          // onGenerateRoute: getNamedPage,
+          onGenerateRoute: getNamedPage,
         );
       },
     );

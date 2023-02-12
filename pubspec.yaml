@@ -47,7 +47,7 @@ dependencies:
   mime_type: ^1.0.0
   http: ^0.13.4
   intl: ^0.17.0
-  modal_bottom_sheet: ^2.0.1
+  modal_bottom_sheet: ^3.0.0-pre
   path_provider: ^2.0.11
   responsive_sizer: ^3.0.8
   ########################################################################################################################
