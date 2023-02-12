@@ -30,18 +30,18 @@ class _RandomChuckNorrisScreenState extends State<RandomChuckNorrisScreen> {
     categories: [],
   );
 
-  final randomBloc = getIt<RandomBloc>();
+  final randomBloc = getIt<RandomViewModel>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: BlocProvider<RandomBloc>(
+      body: BlocProvider<RandomViewModel>(
         create: (context) {
           randomBloc.add(const GetRandomEvent());
           return randomBloc;
         },
-        child: BlocConsumer<RandomBloc, RandomState>(
+        child: BlocConsumer<RandomViewModel, RandomState>(
           listener: (context, state) {
             if (state is SuccessGetRandomState) {
               setState(() {

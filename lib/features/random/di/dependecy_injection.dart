@@ -7,7 +7,7 @@ import 'package:chuck_norris_io/features/random/viewmodel/bloc/random_bloc.dart'
 import 'package:chuck_norris_io/features/random/viewmodel/usecases/get_random.dart';
 
 Future<void> initRandom() async {
-  getIt.registerLazySingleton(() => RandomBloc(
+  getIt.registerLazySingleton(() => RandomViewModel(
         getRandomUseCase: getIt(),
       ));
 

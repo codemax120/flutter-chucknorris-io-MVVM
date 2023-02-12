@@ -7,10 +7,10 @@ import 'package:equatable/equatable.dart';
 part 'random_event.dart';
 part 'random_state.dart';
 
-class RandomBloc extends Bloc<RandomEvent, RandomState> {
+class RandomViewModel extends Bloc<RandomEvent, RandomState> {
   final GetRandomUseCase getRandomUseCase;
 
-  RandomBloc({
+  RandomViewModel({
     required this.getRandomUseCase,
   }) : super(InitGetRandomState()) {
     on<GetRandomEvent>((event, emit) async {
