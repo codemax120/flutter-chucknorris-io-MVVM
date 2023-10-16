@@ -1,10 +1,10 @@
 import 'package:chuck_norris_io/core/injection/injection_container.dart';
-import 'package:chuck_norris_io/features/random/model/contract/random_contract.dart';
-import 'package:chuck_norris_io/features/random/model/contract/random_contract_impl.dart';
-import 'package:chuck_norris_io/features/random/model/datasources/random_datasource.dart';
-import 'package:chuck_norris_io/features/random/model/datasources/random_datasource_impl.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/bloc/random_bloc.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/usecases/get_random.dart';
+import 'package:chuck_norris_io/features/random/data/datasources/random_datasource.dart';
+import 'package:chuck_norris_io/features/random/data/datasources/random_datasource_impl.dart';
+import 'package:chuck_norris_io/features/random/data/repositories/random_contract_impl.dart';
+import 'package:chuck_norris_io/features/random/domain/interfaces/random_contract.dart';
+import 'package:chuck_norris_io/features/random/domain/usecases/get_random.dart';
+import 'package:chuck_norris_io/features/random/presentation/viewmodel/bloc/random_bloc.dart';
 
 Future<void> initRandom() async {
   getIt.registerLazySingleton(() => RandomViewModel(

@@ -1,5 +1,5 @@
+import 'package:chuck_norris_io/features/random/presentation/view/random_chuck_norris.dart';
 import 'package:flutter/material.dart';
-import 'package:chuck_norris_io/features/random/view/pages/random_chuck_norris.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 Route<dynamic> _commonPageWrapper({

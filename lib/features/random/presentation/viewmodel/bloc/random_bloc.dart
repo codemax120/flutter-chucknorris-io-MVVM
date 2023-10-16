@@ -1,7 +1,6 @@
-// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/entities/random_entitie.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/usecases/get_random.dart';
+import 'package:chuck_norris_io/features/random/domain/entities/entities/random_entitie.dart';
+import 'package:chuck_norris_io/features/random/domain/usecases/get_random.dart';
 import 'package:equatable/equatable.dart';
 
 part 'random_event.dart';
@@ -33,16 +32,8 @@ class RandomViewModel extends Bloc<RandomEvent, RandomState> {
       (l) {
         emit(FailedGetRandomState());
         emit(InitGetRandomState());
-        return const GetRandomState(
-          randomEntity: RandomEntity(
-            id: "",
-            url: "",
-            value: "",
-            iconUrl: "",
-            createdAt: "",
-            updatedAt: "",
-            categories: [],
-          ),
+        return GetRandomState(
+          randomEntity: RandomEntity.empty(),
         );
       },
       (resp) {

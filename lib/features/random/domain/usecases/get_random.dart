@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:chuck_norris_io/core/usecases/usecase.dart';
 import 'package:chuck_norris_io/core/network/failure.dart';
-import 'package:chuck_norris_io/features/random/model/contract/random_contract.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/entities/random_entitie.dart';
+import 'package:chuck_norris_io/features/random/domain/interfaces/random_contract.dart';
+import 'package:chuck_norris_io/features/random/domain/entities/entities/random_entitie.dart';
 
 class ParamsUseCaseGetRandom {
   const ParamsUseCaseGetRandom();

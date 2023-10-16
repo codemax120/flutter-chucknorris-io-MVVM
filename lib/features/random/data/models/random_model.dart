@@ -1,4 +1,4 @@
-import 'package:chuck_norris_io/features/random/viewmodel/entities/random_entitie.dart';
+import 'package:chuck_norris_io/features/random/domain/entities/entities/random_entitie.dart';
 
 class RandomModel extends RandomEntity {
   const RandomModel({

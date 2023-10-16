@@ -1,8 +1,8 @@
 import 'package:chuck_norris_io/core/injection/injection_container.dart';
+import 'package:chuck_norris_io/features/random/domain/entities/entities/random_entitie.dart';
+import 'package:chuck_norris_io/features/random/presentation/viewmodel/bloc/random_bloc.dart';
+import 'package:chuck_norris_io/features/random/presentation/widgets/category.dart';
 
-import 'package:chuck_norris_io/features/random/view/widgets/category.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/bloc/random_bloc.dart';
-import 'package:chuck_norris_io/features/random/viewmodel/entities/random_entitie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,15 +20,7 @@ class RandomChuckNorrisScreen extends StatefulWidget {
 }
 
 class _RandomChuckNorrisScreenState extends State<RandomChuckNorrisScreen> {
-  RandomEntity randomEntity = const RandomEntity(
-    id: "",
-    url: "",
-    value: "",
-    iconUrl: "",
-    createdAt: "",
-    updatedAt: "",
-    categories: [],
-  );
+  RandomEntity randomEntity = RandomEntity.empty();
 
   final randomBloc = getIt<RandomViewModel>();
 

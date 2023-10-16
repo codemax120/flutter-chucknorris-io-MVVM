@@ -19,6 +19,18 @@ class RandomEntity extends Equatable {
     required this.categories,
   });
 
+  factory RandomEntity.empty() {
+    return const RandomEntity(
+      id: "",
+      url: "",
+      value: "",
+      iconUrl: "",
+      createdAt: "",
+      updatedAt: "",
+      categories: [],
+    );
+  }
+
   @override
   List<Object?> get props => [
         id,
